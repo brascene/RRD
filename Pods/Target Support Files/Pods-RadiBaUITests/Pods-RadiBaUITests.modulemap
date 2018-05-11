@@ -1,0 +1,6 @@
+framework module Pods_RadiBaUITests {
+  umbrella header "Pods-RadiBaUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

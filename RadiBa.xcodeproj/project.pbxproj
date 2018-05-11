@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		271F952AE129B58E5AB267E2 /* Pods_RadiBaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BF4AE3A54285019E44C6360 /* Pods_RadiBaUITests.framework */; };
+		82B761609EAB0EFADF34D3F1 /* Pods_RadiBaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B918D8F1B9B660EB835528FD /* Pods_RadiBaTests.framework */; };
+		88CF0882B651BC6B33EFD3C2 /* Pods_RadiBa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CA6950D72516C89860DE6A4 /* Pods_RadiBa.framework */; };
+		C4EFB5F820A58DB900019C9F /* JobOwnerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EFB5F720A58DB900019C9F /* JobOwnerViewModel.swift */; };
+		C4EFB5FE20A5901200019C9F /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EFB5FD20A5901100019C9F /* BaseService.swift */; };
+		C4EFB60020A5904300019C9F /* JobOwnerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EFB5FF20A5904300019C9F /* JobOwnerService.swift */; };
+		C4EFB60220A5957500019C9F /* JobOwnerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EFB60120A5957500019C9F /* JobOwnerInteractor.swift */; };
 		C4F3CA4F20A44EA000E2EB25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F3CA4E20A44EA000E2EB25 /* AppDelegate.swift */; };
 		C4F3CA5120A44EA000E2EB25 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F3CA5020A44EA000E2EB25 /* ViewController.swift */; };
 		C4F3CA5620A44EA300E2EB25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4F3CA5520A44EA300E2EB25 /* Assets.xcassets */; };
@@ -25,11 +32,11 @@
 		C4F3CA9220A44F4800E2EB25 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F3CA9020A44F4700E2EB25 /* UIView+Extension.swift */; };
 		C4F3CA9720A44F5B00E2EB25 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F3CA9420A44F5B00E2EB25 /* iCarousel.m */; };
 		C4F3CA9820A44F5B00E2EB25 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C4F3CA9620A44F5B00E2EB25 /* Info.plist */; };
-		C4F3CAA020A44F7500E2EB25 /* TestContent.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4F3CA9A20A44F7400E2EB25 /* TestContent.xib */; };
-		C4F3CAA120A44F7500E2EB25 /* TestContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F3CA9B20A44F7400E2EB25 /* TestContent.swift */; };
+		C4F3CAA020A44F7500E2EB25 /* JobCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4F3CA9A20A44F7400E2EB25 /* JobCard.xib */; };
+		C4F3CAA120A44F7500E2EB25 /* JobCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F3CA9B20A44F7400E2EB25 /* JobCard.swift */; };
 		C4F3CAA220A44F7500E2EB25 /* PhonesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4F3CA9E20A44F7400E2EB25 /* PhonesTableViewCell.xib */; };
 		C4F3CAA320A44F7500E2EB25 /* PhonesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F3CA9F20A44F7400E2EB25 /* PhonesTableViewCell.swift */; };
-		C4F3CAA620A450B900E2EB25 /* JobOwnersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F3CAA520A450B900E2EB25 /* JobOwnersViewController.swift */; };
+		C4F3CAA620A450B900E2EB25 /* JobOwnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F3CAA520A450B900E2EB25 /* JobOwnerViewController.swift */; };
 		C4F3CAAA20A4511200E2EB25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4F3CAA920A4511200E2EB25 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +58,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		165FA2616BA9C94258240A94 /* Pods-RadiBaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RadiBaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RadiBaTests/Pods-RadiBaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1A7506C32E4BF1AA197BFE82 /* Pods-RadiBa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RadiBa.release.xcconfig"; path = "Pods/Target Support Files/Pods-RadiBa/Pods-RadiBa.release.xcconfig"; sourceTree = "<group>"; };
+		1BF4AE3A54285019E44C6360 /* Pods_RadiBaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RadiBaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		332094C7286017B990325444 /* Pods-RadiBaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RadiBaUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RadiBaUITests/Pods-RadiBaUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8CA6950D72516C89860DE6A4 /* Pods_RadiBa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RadiBa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F1D529FAEE2840B43B01F3C /* Pods-RadiBaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RadiBaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RadiBaTests/Pods-RadiBaTests.release.xcconfig"; sourceTree = "<group>"; };
+		A4B3305A8BCC029D746D7452 /* Pods-RadiBa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RadiBa.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RadiBa/Pods-RadiBa.debug.xcconfig"; sourceTree = "<group>"; };
+		B918D8F1B9B660EB835528FD /* Pods_RadiBaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RadiBaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4EFB5F720A58DB900019C9F /* JobOwnerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobOwnerViewModel.swift; sourceTree = "<group>"; };
+		C4EFB5FD20A5901100019C9F /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
+		C4EFB5FF20A5904300019C9F /* JobOwnerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobOwnerService.swift; sourceTree = "<group>"; };
+		C4EFB60120A5957500019C9F /* JobOwnerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobOwnerInteractor.swift; sourceTree = "<group>"; };
 		C4F3CA4B20A44E9F00E2EB25 /* RadiBa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RadiBa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4F3CA4E20A44EA000E2EB25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4F3CA5020A44EA000E2EB25 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,13 +95,14 @@
 		C4F3CA9420A44F5B00E2EB25 /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
 		C4F3CA9520A44F5B00E2EB25 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
 		C4F3CA9620A44F5B00E2EB25 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C4F3CA9A20A44F7400E2EB25 /* TestContent.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestContent.xib; sourceTree = "<group>"; };
-		C4F3CA9B20A44F7400E2EB25 /* TestContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestContent.swift; sourceTree = "<group>"; };
+		C4F3CA9A20A44F7400E2EB25 /* JobCard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JobCard.xib; sourceTree = "<group>"; };
+		C4F3CA9B20A44F7400E2EB25 /* JobCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobCard.swift; sourceTree = "<group>"; };
 		C4F3CA9E20A44F7400E2EB25 /* PhonesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhonesTableViewCell.xib; sourceTree = "<group>"; };
 		C4F3CA9F20A44F7400E2EB25 /* PhonesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhonesTableViewCell.swift; sourceTree = "<group>"; };
 		C4F3CAA420A44F9300E2EB25 /* BridgingHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
-		C4F3CAA520A450B900E2EB25 /* JobOwnersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobOwnersViewController.swift; sourceTree = "<group>"; };
+		C4F3CAA520A450B900E2EB25 /* JobOwnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobOwnerViewController.swift; sourceTree = "<group>"; };
 		C4F3CAA920A4511200E2EB25 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		CEA8E32A9DE459ECF1F3BC22 /* Pods-RadiBaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RadiBaUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RadiBaUITests/Pods-RadiBaUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88CF0882B651BC6B33EFD3C2 /* Pods_RadiBa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82B761609EAB0EFADF34D3F1 /* Pods_RadiBaTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,12 +126,75 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				271F952AE129B58E5AB267E2 /* Pods_RadiBaUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		39543C3CDC99D44245989060 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A4B3305A8BCC029D746D7452 /* Pods-RadiBa.debug.xcconfig */,
+				1A7506C32E4BF1AA197BFE82 /* Pods-RadiBa.release.xcconfig */,
+				165FA2616BA9C94258240A94 /* Pods-RadiBaTests.debug.xcconfig */,
+				9F1D529FAEE2840B43B01F3C /* Pods-RadiBaTests.release.xcconfig */,
+				332094C7286017B990325444 /* Pods-RadiBaUITests.debug.xcconfig */,
+				CEA8E32A9DE459ECF1F3BC22 /* Pods-RadiBaUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C4EFB5F520A58D8A00019C9F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C4F3CA9D20A44F7400E2EB25 /* Cells */,
+				C4F3CAA520A450B900E2EB25 /* JobOwnerViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C4EFB5F620A58DA700019C9F /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				C4EFB5F720A58DB900019C9F /* JobOwnerViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C4EFB5F920A58EB000019C9F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C4EFB5FD20A5901100019C9F /* BaseService.swift */,
+				C4EFB5FF20A5904300019C9F /* JobOwnerService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		C4EFB5FA20A58EB600019C9F /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				C4EFB60120A5957500019C9F /* JobOwnerInteractor.swift */,
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
+		C4EFB5FB20A58ED500019C9F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C4EFB5FC20A58ED900019C9F /* Response Objects */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C4EFB5FC20A58ED900019C9F /* Response Objects */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Response Objects";
+			sourceTree = "<group>";
+		};
 		C4F3CA4220A44E9F00E2EB25 = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +202,8 @@
 				C4F3CA6220A44EA300E2EB25 /* RadiBaTests */,
 				C4F3CA6D20A44EA300E2EB25 /* RadiBaUITests */,
 				C4F3CA4C20A44E9F00E2EB25 /* Products */,
+				39543C3CDC99D44245989060 /* Pods */,
+				DA119658982D49D0AA6F81A0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -133,6 +220,9 @@
 		C4F3CA4D20A44E9F00E2EB25 /* RadiBa */ = {
 			isa = PBXGroup;
 			children = (
+				C4EFB5FB20A58ED500019C9F /* Models */,
+				C4EFB5FA20A58EB600019C9F /* Interactors */,
+				C4EFB5F920A58EB000019C9F /* Services */,
 				C4F3CA9920A44F7400E2EB25 /* Components */,
 				C4F3CA9320A44F5B00E2EB25 /* iCarousel */,
 				C4F3CA8E20A44F3400E2EB25 /* Extensions */,
@@ -211,8 +301,6 @@
 		C4F3CA9920A44F7400E2EB25 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				C4F3CA9A20A44F7400E2EB25 /* TestContent.xib */,
-				C4F3CA9B20A44F7400E2EB25 /* TestContent.swift */,
 				C4F3CA9C20A44F7400E2EB25 /* JobOwners */,
 			);
 			path = Components;
@@ -221,8 +309,8 @@
 		C4F3CA9C20A44F7400E2EB25 /* JobOwners */ = {
 			isa = PBXGroup;
 			children = (
-				C4F3CA9D20A44F7400E2EB25 /* Cells */,
-				C4F3CAA520A450B900E2EB25 /* JobOwnersViewController.swift */,
+				C4EFB5F620A58DA700019C9F /* ViewModels */,
+				C4EFB5F520A58D8A00019C9F /* Views */,
 			);
 			path = JobOwners;
 			sourceTree = "<group>";
@@ -230,10 +318,22 @@
 		C4F3CA9D20A44F7400E2EB25 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				C4F3CA9A20A44F7400E2EB25 /* JobCard.xib */,
+				C4F3CA9B20A44F7400E2EB25 /* JobCard.swift */,
 				C4F3CA9E20A44F7400E2EB25 /* PhonesTableViewCell.xib */,
 				C4F3CA9F20A44F7400E2EB25 /* PhonesTableViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		DA119658982D49D0AA6F81A0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8CA6950D72516C89860DE6A4 /* Pods_RadiBa.framework */,
+				B918D8F1B9B660EB835528FD /* Pods_RadiBaTests.framework */,
+				1BF4AE3A54285019E44C6360 /* Pods_RadiBaUITests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,9 +343,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C4F3CA7320A44EA300E2EB25 /* Build configuration list for PBXNativeTarget "RadiBa" */;
 			buildPhases = (
+				25653DFB96B4254DF1A5EE95 /* [CP] Check Pods Manifest.lock */,
 				C4F3CA4720A44E9F00E2EB25 /* Sources */,
 				C4F3CA4820A44E9F00E2EB25 /* Frameworks */,
 				C4F3CA4920A44E9F00E2EB25 /* Resources */,
+				C4E02D11F3FDB304D9C29FC4 /* [CP] Embed Pods Frameworks */,
+				848495F449C62570C2EE36F7 /* [CP] Copy Pods Resources */,
+				C4EFB60320A5D1B000019C9F /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -260,9 +364,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C4F3CA7620A44EA300E2EB25 /* Build configuration list for PBXNativeTarget "RadiBaTests" */;
 			buildPhases = (
+				1E8FD3730CBB24048A091FAD /* [CP] Check Pods Manifest.lock */,
 				C4F3CA5B20A44EA300E2EB25 /* Sources */,
 				C4F3CA5C20A44EA300E2EB25 /* Frameworks */,
 				C4F3CA5D20A44EA300E2EB25 /* Resources */,
+				A5B59A1C61DDC35890687E30 /* [CP] Embed Pods Frameworks */,
+				CBC573C69D20A20C8C9F4191 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -278,9 +385,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C4F3CA7920A44EA300E2EB25 /* Build configuration list for PBXNativeTarget "RadiBaUITests" */;
 			buildPhases = (
+				771C9D79DA2404A009AB7025 /* [CP] Check Pods Manifest.lock */,
 				C4F3CA6620A44EA300E2EB25 /* Sources */,
 				C4F3CA6720A44EA300E2EB25 /* Frameworks */,
 				C4F3CA6820A44EA300E2EB25 /* Resources */,
+				260054A39557AA8336D40BDE /* [CP] Embed Pods Frameworks */,
+				E14FDB7936D8DA57B56FD359 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -341,7 +451,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4F3CA5920A44EA300E2EB25 /* LaunchScreen.storyboard in Resources */,
-				C4F3CAA020A44F7500E2EB25 /* TestContent.xib in Resources */,
+				C4F3CAA020A44F7500E2EB25 /* JobCard.xib in Resources */,
 				C4F3CA8C20A44F2B00E2EB25 /* SF-Pro-Display-Heavy.otf in Resources */,
 				C4F3CA5620A44EA300E2EB25 /* Assets.xcassets in Resources */,
 				C4F3CA8B20A44F2B00E2EB25 /* SF-Pro-Display-Bold.otf in Resources */,
@@ -373,18 +483,189 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1E8FD3730CBB24048A091FAD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RadiBaTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		25653DFB96B4254DF1A5EE95 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RadiBa-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		260054A39557AA8336D40BDE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RadiBaUITests/Pods-RadiBaUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		771C9D79DA2404A009AB7025 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RadiBaUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		848495F449C62570C2EE36F7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RadiBa/Pods-RadiBa-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A5B59A1C61DDC35890687E30 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RadiBaTests/Pods-RadiBaTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C4E02D11F3FDB304D9C29FC4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RadiBa/Pods-RadiBa-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RadiBa/Pods-RadiBa-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C4EFB60320A5D1B000019C9F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 6f225858b59fda6daf27be366fe2e7ca53e7d1c9 bdc50266847aad2b10d79609385b1b26afba53dcba01566b833426e7e22d8ef4";
+		};
+		CBC573C69D20A20C8C9F4191 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RadiBaTests/Pods-RadiBaTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E14FDB7936D8DA57B56FD359 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RadiBaUITests/Pods-RadiBaUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C4F3CA4720A44E9F00E2EB25 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4F3CAA620A450B900E2EB25 /* JobOwnersViewController.swift in Sources */,
+				C4F3CAA620A450B900E2EB25 /* JobOwnerViewController.swift in Sources */,
 				C4F3CA9120A44F4800E2EB25 /* UIColor+Extension.swift in Sources */,
 				C4F3CA9720A44F5B00E2EB25 /* iCarousel.m in Sources */,
+				C4EFB5F820A58DB900019C9F /* JobOwnerViewModel.swift in Sources */,
+				C4EFB60220A5957500019C9F /* JobOwnerInteractor.swift in Sources */,
 				C4F3CA5120A44EA000E2EB25 /* ViewController.swift in Sources */,
 				C4F3CAA320A44F7500E2EB25 /* PhonesTableViewCell.swift in Sources */,
-				C4F3CAA120A44F7500E2EB25 /* TestContent.swift in Sources */,
+				C4F3CAA120A44F7500E2EB25 /* JobCard.swift in Sources */,
+				C4EFB60020A5904300019C9F /* JobOwnerService.swift in Sources */,
 				C4F3CA9220A44F4800E2EB25 /* UIView+Extension.swift in Sources */,
+				C4EFB5FE20A5901200019C9F /* BaseService.swift in Sources */,
 				C4F3CA4F20A44EA000E2EB25 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -548,8 +829,10 @@
 		};
 		C4F3CA7420A44EA300E2EB25 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4B3305A8BCC029D746D7452 /* Pods-RadiBa.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RG7TDVCX52;
 				HEADER_SEARCH_PATHS = "";
@@ -558,8 +841,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ba.antcolony.radiBa.RadiBa;
+				PRODUCT_BUNDLE_IDENTIFIER = com.antcolony.radiBa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = RadiBa/BridgingHeader.h;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -568,8 +853,10 @@
 		};
 		C4F3CA7520A44EA300E2EB25 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A7506C32E4BF1AA197BFE82 /* Pods-RadiBa.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RG7TDVCX52;
 				HEADER_SEARCH_PATHS = "";
@@ -578,8 +865,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ba.antcolony.radiBa.RadiBa;
+				PRODUCT_BUNDLE_IDENTIFIER = com.antcolony.radiBa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = RadiBa/BridgingHeader.h;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -588,6 +877,7 @@
 		};
 		C4F3CA7720A44EA300E2EB25 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 165FA2616BA9C94258240A94 /* Pods-RadiBaTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -609,6 +899,7 @@
 		};
 		C4F3CA7820A44EA300E2EB25 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F1D529FAEE2840B43B01F3C /* Pods-RadiBaTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -630,6 +921,7 @@
 		};
 		C4F3CA7A20A44EA300E2EB25 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 332094C7286017B990325444 /* Pods-RadiBaUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -650,6 +942,7 @@
 		};
 		C4F3CA7B20A44EA300E2EB25 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CEA8E32A9DE459ECF1F3BC22 /* Pods-RadiBaUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
