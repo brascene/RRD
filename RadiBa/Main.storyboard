@@ -168,9 +168,11 @@
                         <outlet property="carousel" destination="BbD-YH-2l2" id="sTF-F8-DQJ"/>
                         <outlet property="carouselHeight" destination="kdy-ro-TPm" id="IwN-Xx-4Q8"/>
                         <outlet property="interestedLabel" destination="pnH-Zu-wJ1" id="bh7-Ml-Zfj"/>
+                        <outlet property="interestedTop" destination="SsX-nb-Z4l" id="otB-rR-bDv"/>
                         <outlet property="noJobBackground" destination="xcM-WQ-eZD" id="l9F-R4-hHY"/>
                         <outlet property="noUsersView" destination="f5r-rC-lkp" id="9b5-mH-1Zm"/>
                         <outlet property="tableMask" destination="1eP-hj-Y1p" id="Qgp-kH-a3O"/>
+                        <outlet property="tableMaskTop" destination="m0m-Ra-LCP" id="6Ok-hp-AXr"/>
                         <outlet property="tableView" destination="B3G-lF-Hr8" id="SAg-1K-BjZ"/>
                     </connections>
                 </viewController>

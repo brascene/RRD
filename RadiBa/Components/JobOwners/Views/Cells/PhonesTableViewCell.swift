@@ -10,7 +10,11 @@ import UIKit
 
 class PhonesTableViewCell: UITableViewCell {
     @IBOutlet weak var tableCellShadowView: UIView!
+    @IBOutlet weak var starView: UIView!
+    @IBOutlet weak var phoneLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
     
+    @IBOutlet weak var phoneCallImage: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -24,6 +28,46 @@ class PhonesTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
+    
+    func setupTable(with user: AppliedUser) {
+        phoneLabel.text = user.phoneNumber
+        nameLabel.text = user.userName
+        if user.isRated {
+            phoneCallImage.alpha = 0.0
+            starView.alpha = 1.0
+            if starView.subviews.count == 0 {
+                showStarView(with: user.ratingNumber)
+            }
+        } else {
+            phoneCallImage.alpha = 1.0
+            starView.alpha = 0.0
+        }
+    }
+    
+    func showStarView(with stars: Int) {
+        let starViewOrigin = starView.frame.origin
+        for v in starView.subviews {
+            v.removeFromSuperview()
+        }
+        for i in 0 ... 4 {
+            let singleStar: UIImageView = UIImageView()
+            singleStar.translatesAutoresizingMaskIntoConstraints = true
+            singleStar.frame = CGRect(origin: starViewOrigin, size: CGSize(width: 12.5, height: 11.5))
+            
+            if i < stars {
+                singleStar.image = #imageLiteral(resourceName: "star")
+            } else {
+                singleStar.image = #imageLiteral(resourceName: "grayStar")
+            }
+            
+            let newOriginX = starViewOrigin.x + (CGFloat(i) * singleStar.frame.width + CGFloat(2))
+            let singleStarFrame: CGRect = CGRect(x: newOriginX, y: starViewOrigin.y, width: singleStar.frame.width, height: singleStar.frame.height)
+            singleStar.frame = singleStarFrame
+            
+            starView.addSubview(singleStar)
+            self.contentView.addSubview(starView)
+        }
+     }
     
     func setupShadow() {
         tableCellShadowView!.layer.shadowOffset = CGSize(width: 0, height: 10)

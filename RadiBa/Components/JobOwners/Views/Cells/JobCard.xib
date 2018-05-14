@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -33,6 +32,9 @@
                 </view>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="testJob" translatesAutoresizingMaskIntoConstraints="NO" id="jmY-oO-cb8">
                     <rect key="frame" x="0.0" y="0.0" width="318" height="113"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="113" id="c7u-rh-Q06"/>
+                    </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Job name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hWU-1y-fGk">
                     <rect key="frame" x="16" y="132" width="286" height="21"/>
@@ -43,19 +45,18 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQt-CW-Ul1">
-                    <rect key="frame" x="16" y="161" width="260" height="45"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3+ godine iskustva, fleksibilnost, poznavanje engleskog jezika, poznavanje rada na racunaru" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQt-CW-Ul1">
+                    <rect key="frame" x="16" y="157" width="286" height="33.5"/>
                     <constraints>
-                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="45" id="KEs-iQ-5kY"/>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="KEs-iQ-5kY"/>
                     </constraints>
-                    <string key="text">3+ godine iskustva, fleksibilnost, poznavanje stranog jezika, poznavanje rada na racunaru, timski rad, vjestine microsoft officea, da voli pojest popit</string>
                     <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="14"/>
                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Iw-aH-bWx">
                     <rect key="frame" x="16" y="72" width="116" height="28"/>
-                    <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="0.92156862745098034" green="0.10980392156862745" blue="0.29803921568627451" alpha="1" colorSpace="deviceRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="116" id="Qdx-Sy-0hi"/>
                         <constraint firstAttribute="height" constant="28" id="xMP-pW-vbp"/>
@@ -71,7 +72,7 @@
                     </userDefinedRuntimeAttributes>
                 </button>
                 <imageView clipsSubviews="YES" tag="4" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" image="downArrow" translatesAutoresizingMaskIntoConstraints="NO" id="iIt-uY-CnJ">
-                    <rect key="frame" x="284" y="199" width="19" height="19"/>
+                    <rect key="frame" x="283" y="199" width="19" height="19"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="19" id="hlE-Fm-jam"/>
                         <constraint firstAttribute="width" constant="19" id="ldq-xK-8Rw"/>
@@ -94,17 +95,16 @@
                 <constraint firstAttribute="bottom" secondItem="RC8-5g-wcV" secondAttribute="bottom" id="NQK-E1-Rrh"/>
                 <constraint firstAttribute="bottom" secondItem="FnX-qx-QWV" secondAttribute="bottom" id="QlK-Um-mo6"/>
                 <constraint firstItem="9Iw-aH-bWx" firstAttribute="leading" secondItem="RC8-5g-wcV" secondAttribute="leading" constant="16" id="RUk-UU-hoh"/>
-                <constraint firstItem="iIt-uY-CnJ" firstAttribute="leading" secondItem="LQt-CW-Ul1" secondAttribute="trailing" constant="8" id="cTY-yk-O0m"/>
+                <constraint firstItem="RC8-5g-wcV" firstAttribute="trailing" secondItem="LQt-CW-Ul1" secondAttribute="trailing" constant="16" id="cTY-yk-O0m"/>
                 <constraint firstAttribute="trailing" secondItem="RC8-5g-wcV" secondAttribute="trailing" id="cYR-26-5zL"/>
                 <constraint firstAttribute="trailing" secondItem="FnX-qx-QWV" secondAttribute="trailing" id="fb3-Y7-xf3"/>
                 <constraint firstItem="RC8-5g-wcV" firstAttribute="trailing" secondItem="hWU-1y-fGk" secondAttribute="trailing" constant="16" id="hEP-MN-XP4"/>
-                <constraint firstAttribute="trailing" secondItem="iIt-uY-CnJ" secondAttribute="trailing" constant="15" id="hWd-YZ-sse"/>
+                <constraint firstAttribute="trailing" secondItem="iIt-uY-CnJ" secondAttribute="trailing" constant="16" id="hWd-YZ-sse"/>
                 <constraint firstItem="jmY-oO-cb8" firstAttribute="top" secondItem="RC8-5g-wcV" secondAttribute="top" id="kzB-GN-Y3d"/>
                 <constraint firstItem="LQt-CW-Ul1" firstAttribute="leading" secondItem="RC8-5g-wcV" secondAttribute="leading" constant="16" id="lHP-t7-QHa"/>
                 <constraint firstItem="jmY-oO-cb8" firstAttribute="leading" secondItem="RC8-5g-wcV" secondAttribute="leading" id="rbc-Lx-wk6"/>
-                <constraint firstItem="LQt-CW-Ul1" firstAttribute="top" secondItem="hWU-1y-fGk" secondAttribute="bottom" constant="8" id="rc1-QQ-8eY"/>
+                <constraint firstItem="LQt-CW-Ul1" firstAttribute="top" secondItem="hWU-1y-fGk" secondAttribute="bottom" constant="4" id="rc1-QQ-8eY"/>
                 <constraint firstItem="RC8-5g-wcV" firstAttribute="trailing" secondItem="jmY-oO-cb8" secondAttribute="trailing" id="vM2-ZE-L6x"/>
-                <constraint firstItem="jmY-oO-cb8" firstAttribute="height" secondItem="RC8-5g-wcV" secondAttribute="height" multiplier="0.5" id="vqx-ek-tb7"/>
                 <constraint firstItem="hWU-1y-fGk" firstAttribute="leading" secondItem="RC8-5g-wcV" secondAttribute="leading" constant="16" id="xG2-tL-VwN"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -121,6 +121,7 @@
                 <outlet property="gestureView" destination="FnX-qx-QWV" id="yxg-Wj-KJy"/>
                 <outlet property="jobContentView" destination="RC8-5g-wcV" id="oYB-fb-d4o"/>
                 <outlet property="jobImage" destination="jmY-oO-cb8" id="0bC-UD-dZd"/>
+                <outlet property="jobTitleLabel" destination="hWU-1y-fGk" id="TrV-fI-dGa"/>
             </connections>
             <point key="canvasLocation" x="-187" y="9"/>
         </view>

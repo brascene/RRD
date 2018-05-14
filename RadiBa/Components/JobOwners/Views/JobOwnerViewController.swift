@@ -20,8 +20,12 @@ class JobOwnerViewController: UIViewController, iCarouselDataSource, iCarouselDe
     @IBOutlet weak var interestedLabel: UILabel!
     @IBOutlet weak var noUsersView: UIView!
     @IBOutlet weak var noJobBackground: UIImageView!
+    @IBOutlet weak var tableMaskTop: NSLayoutConstraint!  // 31 default
+    @IBOutlet weak var interestedTop: NSLayoutConstraint!  // 0 default
     
     var viewModel: JobOwnerViewModel = JobOwnerViewModel()
+    var currentJobExpanded = false
+    var currentJobExpandedIndex = -1
     
     override var prefersStatusBarHidden: Bool {
         return true
@@ -93,12 +97,13 @@ class JobOwnerViewController: UIViewController, iCarouselDataSource, iCarouselDe
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return viewModel.appliedUsers.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PhonesTableViewCell", for: indexPath) as! PhonesTableViewCell
         cell.selectionStyle = .none
+        cell.setupTable(with: viewModel.appliedUsers[indexPath.row])
         return cell
     }
     
@@ -107,26 +112,27 @@ class JobOwnerViewController: UIViewController, iCarouselDataSource, iCarouselDe
     }
 
     func numberOfItems(in carousel: iCarousel) -> Int {
-        return items.count
+        return viewModel.openJobs.count
     }
     
     func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {
-        let testView: JobCard = .fromNib()
-        testView.delegate = self
-        testView.layer.cornerRadius = 11.0
+        let jobCard: JobCard = .fromNib()
+        jobCard.delegate = self
+        jobCard.layer.cornerRadius = 11.0
         
         if viewModel.screenStatus == .NoUsers {
-            testView.featuresLabel.text = "Nema konkretnih zathjeva za poziciju"
-            testView.arrow.isHidden = true
-            testView.featuresLabel.isUserInteractionEnabled = false
+            jobCard.featuresLabel.text = "Nema konkretnih zathjeva za poziciju"
+            jobCard.arrow.isHidden = true
+            jobCard.featuresLabel.isUserInteractionEnabled = false
         } else {
-            testView.featuresLabel.isUserInteractionEnabled = true
-            testView.arrow.isHidden = false
-            testView.arrow.isUserInteractionEnabled = true
+            jobCard.featuresLabel.isUserInteractionEnabled = true
+            jobCard.arrow.isHidden = false
+            jobCard.arrow.isUserInteractionEnabled = true
+            jobCard.singleJob = viewModel.openJobs[index]
         }
                 
-        carousel.frame = testView.layer.bounds
-        return testView
+        carousel.frame = jobCard.layer.bounds
+        return jobCard
     }
     
     func carousel(_ carousel: iCarousel, valueFor option: iCarouselOption, withDefault value: CGFloat) -> CGFloat {
@@ -142,18 +148,26 @@ class JobOwnerViewController: UIViewController, iCarouselDataSource, iCarouselDe
             let transform = CATransform3DTranslate(CATransform3DIdentity, 400, 0, 0)
             tableView.layer.transform = transform
             
-            UIView.animate(withDuration: 0.7) {
+            UIView.animate(withDuration: 0.7, animations: {
                 self.tableView.alpha = 1.0
                 self.tableView.layer.transform = CATransform3DIdentity
+            }) { _ in
+                if self.currentJobExpanded {
+                    self.changeJobCardView(for: carousel.currentItemIndex - 1, expanded: true)
+                }
             }
         } else {
             tableView.alpha = 0.0
             let transform = CATransform3DTranslate(CATransform3DIdentity, -300, 0, 0)
             tableView.layer.transform = transform
             
-            UIView.animate(withDuration: 0.7) {
+            UIView.animate(withDuration: 0.7, animations: {
                 self.tableView.alpha = 1.0
                 self.tableView.layer.transform = CATransform3DIdentity
+            }) { _ in
+                if self.currentJobExpanded {
+                    self.changeJobCardView(for: carousel.currentItemIndex + 1, expanded: true)
+                }
             }
         }
         currentJobIndex = carousel.currentItemIndex
@@ -170,34 +184,50 @@ class JobOwnerViewController: UIViewController, iCarouselDataSource, iCarouselDe
     }
     
     func arrowClicked(expanded: Bool) {
-        let currentFrame = carousel.currentItemView?.frame
-
+        self.currentJobExpanded = true
+        self.currentJobExpandedIndex = carousel.currentItemIndex
+        changeJobCardView(for: carousel.currentItemIndex, expanded: expanded)
+    }
+    
+    func changeJobCardView(for index: Int, expanded: Bool) {
+        let currentFrame = carousel.itemView(at: index)?.frame
+        
         if expanded == false {
-            let newFrame = CGRect(x: (currentFrame?.origin.x)!, y: ((currentFrame?.origin.y)! - 20), width: (currentFrame?.size.width)!, height: (currentFrame?.size.height)! + 40)
+            let newFrame = CGRect(x: (currentFrame?.origin.x)!, y: ((currentFrame?.origin.y)!), width: (currentFrame?.size.width)!, height: (currentFrame?.size.height)! + 20)
             
-            let currentItemView = self.carousel.currentItemView as! JobCard
+            let civ = self.carousel.itemView(at: index) as! JobCard
+            
+            self.tableMaskTop.constant += 20
+            self.interestedTop.constant += 20
             
             UIView.animate(withDuration: 0.6, animations: {
-                currentItemView.frame = newFrame
-                currentItemView.layoutIfNeeded()
-                currentItemView.layoutSubviews()
+                civ.frame = newFrame
+                self.view.layoutIfNeeded()
+                civ.layoutSubviews()
             }) { (finished) in
                 if finished {
-                    currentItemView.arrow.transform = currentItemView.arrow.transform.rotated(by: .pi)
+                    civ.arrow.transform = civ.arrow.transform.rotated(by: .pi)
+                    civ.contentViewExpanded = true
+                    civ.layoutSubviews()
                 }
             }
         } else {
-            let newFrame = CGRect(x: (currentFrame?.origin.x)!, y: (currentFrame?.origin.y)! + 20, width: (currentFrame?.size.width)!, height: (currentFrame?.size.height)! - 40)
-            let currentItemView = self.carousel.currentItemView as! JobCard
+            let newFrame = CGRect(x: (currentFrame?.origin.x)!, y: (currentFrame?.origin.y)!, width: (currentFrame?.size.width)!, height: (currentFrame?.size.height)! - 20)
+            let civ = self.carousel.itemView(at: index) as! JobCard
+
+            self.tableMaskTop.constant -= 20
+            self.interestedTop.constant -= 20
             
             UIView.animate(withDuration: 0.6, animations: {
-                currentItemView.frame = newFrame
-                currentItemView.layoutSubviews()
-                currentItemView.layoutIfNeeded()
+                civ.frame = newFrame
+                civ.layoutIfNeeded()
+                self.view.layoutIfNeeded()
             }) { (finished) in
                 if finished {
-                    currentItemView.arrow.transform = currentItemView.arrow.transform.rotated(by: -.pi)
-                    currentItemView.jobContentView.roundCorners([.bottomLeft, .bottomRight], radius: 11.0)
+                    civ.arrow.transform = civ.arrow.transform.rotated(by: -.pi)
+                    civ.jobContentView.roundCorners([.bottomLeft, .bottomRight], radius: 11.0)
+                    civ.contentViewExpanded = false
+                    self.currentJobExpanded = false
                 }
             }
         }

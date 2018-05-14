@@ -19,7 +19,7 @@ extension UIColor {
     }
     
     class func deleteJobColor() -> UIColor {
-        return UIColor(rgb: 0xee7157, alphaVal: 1.0)
+        return UIColor(rgb: 0xEB1C4C, alphaVal: 1.0)
     }
     
     class func addJobColor() -> UIColor {
